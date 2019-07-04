@@ -1,0 +1,106 @@
+body {
+    /* background: black; */
+    font-family: 'Press Start 2P', cursive !important;
+    color: white;
+    margin-top: 20px;
+}
+
+.mainApp {
+    z-index: 0;
+}
+
+#score {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+div {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+.btn {
+    margin-top: 20px;
+    color: red;
+    display: inline-block;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-webkit-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-moz-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-ms-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+
+
+.stars,
+.twinkling,
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000 url(images/stars.png) repeat top center;
+    z-index: -3;
+}
+
+.twinkling {
+    background: transparent url(images/twinkling.png) repeat top center;
+    z-index: -2;
+    -moz-animation: move-twink-back 200s linear infinite;
+    -ms-animation: move-twink-back 200s linear infinite;
+    -o-animation: move-twink-back 200s linear infinite;
+    -webkit-animation: move-twink-back 200s linear infinite;
+    animation: move-twink-back 200s linear infinite;
+}
